@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            height: 300px;
+            width: 300px;
+            border: 2px solid;
+            text-align: center;
+
+        }
+
+        .logo {
+            margin: 5px;
+            height: 40px;
+            width: 40px;
+            border: 2px solid;
+            border-radius: 100%;
+            float: left;
+        }
+
+        .b {
+            display: flex;
+            gap: 10px 240px;
+            padding: 10px;
+            margin-top: 100px;
+        }
+
+        .limit {display: flex;
+            gap: 10px 190px;
+            padding: 10px;
+            margin-top: 10px;}
+    </style>
+
+
+</head>
+
+<body>
+
+    <script>
+         let count = 0;
+
+    function increment() {
+      count++;
+      document.getElementById("counter").innerText = count;
+    }
+
+    function decrement() {
+      count--;
+      document.getElementById("counter").innerText = count;
+    }
+    </script>
+    <div class="container">
+        <div class="logo">
+
+        </div>
+        <div>
+            <h3>Counter App</h3>
+        </div>
+        <div class="limit">
+            <div><button onclick="">Max Limit</button></div>
+            <div><button onclick="">Min Limit</button></div>
+        </div>
+           <div id="counter">0</div>
+        <div class="b">
+            <div><button onclick="increment()">+</button></div>
+            <div><button onclick="decrement()">-</button></div>
+        </div>
+
+
+    </div>
+</body>
+
+</html>
