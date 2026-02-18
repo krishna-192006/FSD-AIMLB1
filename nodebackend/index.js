@@ -1,5 +1,6 @@
 const http = require("http");
 const sum = require("./fetchData.js");
+const writeData = require('./usefsmodule.js')
 const PORT = 4007;
 const server = http.createServer( async(req, res) => {
 
@@ -20,6 +21,13 @@ const server = http.createServer( async(req, res) => {
     const sumData = await sum()
     res.end(JSON.stringify({ msg: sumData }));
   }
+
+  if (req.url == "/writeData" && req.method == "GET") {
+    res.setHeader("content-type", "application/json");
+    const sumData = await writeData()
+    res.end(JSON.stringify({ msg: sumData }));
+  }
+
 
   if (req.url == "/data" && req.method == "POST") {
     res.setHeader("content-type", "application/json");
