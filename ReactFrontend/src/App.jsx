@@ -26,7 +26,7 @@ function App() {
         <h2>Hello from App.jsx</h2>
         {
           data.map((ele)=>(
-           <div style={{border:'2px solid black'}}>
+            <div style={{border:'8px solid orange'}}>
               <img src={ele.image} height={200} width={200}/>
               <h2>{ele.id}:{ele.title}</h2>
               <h3>{ele.title}</h3>
